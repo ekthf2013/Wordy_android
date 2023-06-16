@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav"
+    app:startDestination="@id/firstScreen">
+
+    <fragment
+        android:id="@+id/firstScreen"
+        android:name="com.example.wordy.FirstScreen"
+        android:label="FirstScreen" >
+        <action
+            android:id="@+id/action_firstScreen_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/lv1Main"
+        android:name="com.example.wordy.Lv1Main"
+        android:label="Lv1Main" >
+        <action
+            android:id="@+id/action_lv1Main_to_step1"
+            app:destination="@id/step1" />
+        <action
+            android:id="@+id/action_lv1Main_to_step2"
+            app:destination="@id/step2" />
+        <action
+            android:id="@+id/action_lv1Main_to_step3"
+            app:destination="@id/step3" />
+        <action
+            android:id="@+id/action_lv1Main_to_step4"
+            app:destination="@id/step4" />
+    </fragment>
+    <fragment
+        android:id="@+id/lv2Main"
+        android:name="com.example.wordy.Lv2Main"
+        android:label="Lv2Main" />
+    <fragment
+        android:id="@+id/lv3Main"
+        android:name="com.example.wordy.Lv3Main"
+        android:label="Lv3Main" />
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="com.example.wordy.MainScreen"
+        android:label="MainScreen" >
+        <action
+            android:id="@+id/action_mainScreen_to_lv1Main"
+            app:destination="@id/lv1Main" />
+        <action
+            android:id="@+id/action_mainScreen_to_lv2Main"
+            app:destination="@id/lv2Main" />
+        <action
+            android:id="@+id/action_mainScreen_to_lv3Main"
+            app:destination="@id/lv3Main" />
+    </fragment>
+    <fragment
+        android:id="@+id/step1"
+        android:name="com.example.wordy.Step1"
+        android:label="Step1" >
+        <action
+            android:id="@+id/action_step1_to_lv1Main"
+            app:destination="@id/lv1Main" />
+        <action
+            android:id="@+id/action_step1_to_step2"
+            app:destination="@id/step2" />
+    </fragment>
+    <fragment
+        android:id="@+id/step2"
+        android:name="com.example.wordy.Step2"
+        android:label="Step2" >
+        <action
+            android:id="@+id/action_step2_to_lv1Main"
+            app:destination="@id/lv1Main" />
+        <action
+            android:id="@+id/action_step2_to_step3"
+            app:destination="@id/step3" />
+    </fragment>
+    <fragment
+        android:id="@+id/step3"
+        android:name="com.example.wordy.Step3"
+        android:label="Step3" >
+        <action
+            android:id="@+id/action_step3_to_step4"
+            app:destination="@id/step4" />
+    </fragment>
+    <fragment
+        android:id="@+id/step4"
+        android:name="com.example.wordy.Step4"
+        android:label="Step4" >
+        <action
+            android:id="@+id/action_step4_to_lv1Main"
+            app:destination="@id/lv1Main" />
+    </fragment>
+</navigation>
